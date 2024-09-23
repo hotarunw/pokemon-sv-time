@@ -22,10 +22,10 @@ export const adjustTimeByHours = (
 };
 
 export const toKitakamiTime = (paldeaTime: Date): Date =>
-  adjustTimeByHours(paldeaTime, -6);
+  adjustTimeByHours(paldeaTime, 6);
 
 export const toBlueberryTime = (paldeaTime: Date): Date =>
-  adjustTimeByHours(paldeaTime, 6);
+  adjustTimeByHours(paldeaTime, -6);
 
 export type TimeOfDay = "morning" | "day" | "evening" | "night";
 
