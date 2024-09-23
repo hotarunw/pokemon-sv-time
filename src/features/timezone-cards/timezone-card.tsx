@@ -32,13 +32,13 @@ export function TimezoneCard({ date, name, color }: TimezoneCardProps) {
 
   return (
     <div
-      className={`block w-56 rounded-lg border border-gray-200 ${backgroundClass} p-4 shadow transition-colors duration-300 dark:border-gray-700`}
+      className={`block w-48 rounded-lg border border-gray-200 ${backgroundClass} p-4 shadow transition-colors duration-300 dark:border-gray-700`}
     >
-      <h3 className="flex items-center text-xl font-medium dark:text-white">
+      <h3 className="flex items-center text-lg font-medium dark:text-white">
         <span className="me-2">{name}</span>
         <TimeOfDayBadge timeOfDay={timeOfDay} />
       </h3>
-      <p className="text-4xl font-extrabold text-gray-900 dark:text-white">
+      <p className="text-3xl font-extrabold text-gray-900 dark:text-white">
         {date.toLocaleTimeString()}
       </p>
     </div>

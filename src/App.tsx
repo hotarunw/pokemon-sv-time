@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { TimezoneCardProps } from "./features/timezone-cards/timezone-card";
 import TimezoneCards from "./features/timezone-cards/timezone-cards";
-import TimezoneTable from "./features/timezone-table/timezone-table";
+import TimezoneTable, {
+  TimezoneTableProps,
+} from "./features/timezone-table/timezone-table";
 import {
   toBlueberryTime,
   toKitakamiTime,
@@ -18,7 +20,7 @@ function App() {
   }, []);
 
   const paldeaTime = toPaldeaTime(date);
-  const hogehoge: TimezoneCardProps[] = [
+  const timezones: TimezoneCardProps[] = [
     { date: date, name: "現在時刻", color: "gray" },
     { date: paldeaTime, name: "パルデア地方", color: "orange" },
     { date: toKitakamiTime(paldeaTime), name: "キタカミの里", color: "teal" },
@@ -28,14 +30,35 @@ function App() {
       color: "indigo",
     },
   ];
+  const table: TimezoneTableProps = {
+    date: date,
+    columns: [
+      {
+        name: "現在時刻",
+        color: "gray",
+      },
+      {
+        name: "パルデア地方",
+        color: "orange",
+      },
+      {
+        name: "キタカミの里",
+        color: "teal",
+      },
+      {
+        name: "ブルーベリー学園",
+        color: "indigo",
+      },
+    ],
+  };
 
   return (
     <>
       <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
         ポケモンSV時間表示
       </h1>
-      <TimezoneCards timezones={hogehoge}></TimezoneCards>
-      <TimezoneTable></TimezoneTable>
+      <TimezoneCards timezones={timezones}></TimezoneCards>
+      <TimezoneTable {...table}></TimezoneTable>
       <div>
         <span className="mb-6 text-lg font-normal text-gray-500 dark:text-gray-400">
           ポケモンSVの3地方の時間と時間帯を表示する。現在時刻の12:18がパルデア地方の06:00。パルデア地方では時間は20倍の速さで進む。6時が朝、12時が昼、18時が夕方、19時が夜。キタカミの里は6時間進んでいる。ブルーベリー学園は6時間遅れている。

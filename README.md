@@ -1,3 +1,16 @@
+# Pokemon SV Time
+
+ポケモンSVの3地方の時間と時間帯を表示する。現在時刻の12:18がパルデア地方の06:00。パルデア地方では時間は20倍の速さで進む。6時が朝、12時が昼、18時が夕方、19時が夜。キタカミの里は6時間進んでいる。ブルーベリー学園は6時間遅れている。
+
+## 参考
+
+[時間帯 \- ポケモンWiki](https://wiki.xn--rckteqa2e.com/wiki/%E6%99%82%E9%96%93%E5%B8%AF#%E3%82%B9%E3%82%AB%E3%83%BC%E3%83%AC%E3%83%83%E3%83%88%E3%83%BB%E3%83%90%E3%82%A4%E3%82%AA%E3%83%AC%E3%83%83%E3%83%88)
+[Pokémon Scarlet & Violet \- Day & Night Cycle](https://www.serebii.net/scarletviolet/daynightcycle.shtml)
+
+--------------------
+--------------------
+--------------------
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
